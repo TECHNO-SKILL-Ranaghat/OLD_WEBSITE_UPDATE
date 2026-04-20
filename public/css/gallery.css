@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #f6f8fb;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* TITLE */
+.gallery-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.gallery {
+    column-count: 4;
+    column-gap: 15px;
+}
+
+@media(max-width: 992px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 768px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media(max-width: 480px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+/* ITEM */
+.gallery-item {
+    position: relative;
+    margin-bottom: 15px;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* IMAGE */
+.gallery-item img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* OVERLAY */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ICON */
+.gallery-overlay i {
+    color: #fff;
+    font-size: 26px;
+}
+
+/* CARD SHADOW */
+.gallery-item {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FIX LIGHTBOX BACKGROUND */
+.glightbox {
+    background: transparent !important;
+}
+
+/* REMOVE INNER WHITE AREA */
+.gslide {
+    background: transparent !important;
+}
+
+/* IMAGE FULL FIT */
+.gslide-image img {
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    margin: auto;
+    display: block;
+}
+
+/* REMOVE EXTRA SIDE SPACE */
+.ginner-container {
+    justify-content: center !important;
+}

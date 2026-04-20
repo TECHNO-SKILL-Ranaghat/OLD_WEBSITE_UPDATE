@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/videoGallery.css">
+</head>
+
+<body>
+
+    <section class="video-section py-5">
+        <div class="container">
+
+            <h2 class="text-center mb-5 fw-bold">Video Gallery</h2>
+
+            <div class="row g-4">
+
+                <!-- VIDEO CARD -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <img src="https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COPY MORE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">
+                        <img src="https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <img src="https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <img src="https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <img src="https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">
+                        <img src="https://img.youtube.com/vi/ysz5S6PUM-U/maxresdefault.jpg" class="img-fluid">
+                        <div class="play-btn">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="videoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-body p-0 position-relative">
+
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 m-2"
+                        data-bs-dismiss="modal"></button>
+
+                    <iframe id="videoFrame" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/videoGallery.js"></script>
+
+</body>
+
+</html>

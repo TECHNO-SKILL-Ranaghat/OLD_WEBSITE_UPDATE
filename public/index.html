@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>AIBCE UI Demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="./css/styles.css" />	
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col bg-dark p-3">
+				<div class="d-flex flex-wrap justify-content-center gap-2">
+					<button class="custom-button">Verification</button>
+					<button class="custom-button">Application</button>
+					<button class="custom-button">Admission</button>
+					<button class="custom-button">Results</button>
+					<button class="custom-button"><a href="./login.html"
+							class="textDecoration text-black">Login</a></button>
+					<button class="custom-button">Contact</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href>
+				<img src="./assets/logo.jpeg" alt="Logo" height="45" />
+			</a>
+			<button class="navbar-toggler" id="menuToggle" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto text-center jura">
+					<li class="nav-item mx-2"><a class="nav-link" href="#">Home</a></li>
+					<li class="nav-item dropdown mx-2">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+						<ul class="dropdown-menu custom-dropdown">
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="./about.html">About Us</a></li>
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="#">Chairmen Message</a></li>
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="#">Bank Details</a></li>
+							<li class="sub-menu"><a class="dropdown-item" href="#">Our Affiliation</a></li>
+						</ul>
+					</li>
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="./course.html">Courses</a>
+					</li>
+
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="./studyCenter.html">Study Centre</a>
+					</li>
+					<li class="nav-item dropdown mx-2">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Student
+							Zone</a>
+						<ul class="dropdown-menu custom-dropdown">
+							<li class="sub-menu">
+								<a class="dropdown-item border-bottom" href="./StudentRegistration.html">Student Registration</a>
+							</li>
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="#">Student Login</a></li>
+							<li class="sub-menu">
+								<a class="dropdown-item" href="#">Student Verification</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown mx-2">
+						<a class="nav-link dropdown-toggle" href="#" role="button"
+							data-bs-toggle="dropdown">Franchise</a>
+						<ul class="dropdown-menu custom-dropdown">
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="./FranchiseApplication.html">Application</a></li>
+							<li class="sub-menu"><a class="dropdown-item" href="#">Login</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="#">Download</a>
+					</li>
+					<li class="nav-item dropdown mx-2">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Gallery</a>
+						<ul class="dropdown-menu custom-dropdown">
+							<li class="sub-menu border-bottom"><a class="dropdown-item" href="./Gallery.html">Photo Gallery</a></li>
+							<li class="sub-menu"><a class="dropdown-item" href="./VideoGallery.html">Video Gallery</a></li>
+						</ul>
+					</li>
+					<li class="nav-item mx-2">
+						<a class="nav-link" href="./contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Carousel -->
+	<div id="carouselExample" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="./assets/Slider (1).jpeg" class="d-block w-100" alt="..." />
+			</div>
+			<div class="carousel-item">
+				<img src="./assets/Slider (2).jpeg" class="d-block w-100" alt="..." />
+			</div>
+			<div class="carousel-item">
+				<img src="./assets/Slider (3).jpeg" class="d-block w-100" alt="..." />
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+			data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+	</div>
+
+	<!-- Welcome Section -->
+	<div class="container mt-4 text-center">
+		<h5 class="text-danger text-uppercase fs-2 welcome-heading">Welcome to</h5>
+		<h4 class="text-uppercase fs-1 welcome-subheading">All India Board Of Computer Education</h4>
+		<p class="welcome-description fs-5">
+			All India Board of Computer Education is an Autonomous Organization
+			Registered under the Indian Public Trust Act, 1882
+			<span class="nowrap">(Reg. No. IV-1903-021924/2017)</span>. This is a
+			fastest growing Educational organization working in Multi Category
+			Education like Computer Education, Vocational / ITI Education, Medical &
+			Health Care Education, Business & Management Education, School and
+			Madrasa Education and much more approved by the Govt. of India.
+		</p>
+	</div>
+
+	<!-- Cards Section -->
+	<div class="container my-3 d-flex flex-row">
+		<div class="row m-2 g-5 d-flex align-items-center justify-content-center w-75">
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem ipsum.</p>
+				</div>
+			</div>
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem ipsum.</p>
+				</div>
+			</div>
+
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem, ipsum.</p>
+				</div>
+			</div>
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem, ipsum.</p>
+				</div>
+			</div>
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem, ipsum.</p>
+				</div>
+			</div>
+			<div class="col-4 col-sm-6 col-md-4 col-lg-4">
+				<div class="card card-details">
+					<p class="test">Lorem, ipsum.</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row mt-5 me-5 justify-content-center w-25 news border border-black">
+			<div class="news-heading d-flex align-items-center justify-content-center">
+				<h4 class="fs-5">News & Updates</h4>
+			</div>
+			<div class="col-12 news-content text-center m-2 d-flex justify-content-center">
+					<div class="news-scroll">
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+						<p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container my-4">
+		<div class="row g-4 justify-content-center mt-4">
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="card student-reg d-flex flex-column justify-content-center align-items-center">
+					<p class="montserrat text-center">Apply for Student Registration</p>
+					<button class="button btn btn-secondary montserrat">Apply Now</button>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div
+					class="card franc-appli d-flex flex-column justify-content-center align-items-center text-white patua-one">
+					<p class="montserrat text-center">Apply for Franchise Application</p>
+					<button class="button btn btn-secondary montserrat">Apply Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Student Section -->
+	<section class="student-section">
+		<div class="container">
+			<div class="row g-4">
+
+				<!-- Applied -->
+				<div class="col-md-4">
+					<div class="student-box">
+						<div class="student-title title-applied">
+							APPLIED STUDENT'S
+						</div>
+
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong> Akash Chini</p>
+								<p><strong class="me-1">Course:</strong>Advance Diploma in Computer Application</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong>Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Advance Diploma In Information Technology</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong>Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Advance Diploma In Information Technology</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Registered -->
+				<div class="col-md-4">
+					<div class="student-box">
+						<div class="student-title title-registered">
+							REGISTERED STUDENT'S
+						</div>
+
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong> Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Diploma in Computer Application & Accounting</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<!-- <div class="row">
+									<span class="col-6">
+										<p><strong>Name:</strong></p>
+										<p><strong>Course:</strong></p>
+										<p><strong>Centre:</strong></p>
+									</span>
+									<span class="col-6">
+										<p>Shely Begum</p>
+										<p>Diploma In Desktop Publishing</p>
+										<p>Techno Skill IT Training</p>
+									</span>
+								</div> -->
+								<p><strong class="me-1">Name:</strong> Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Diploma In Desktop Publishing</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong>Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Advance Diploma In Information Technology</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Certified -->
+				<div class="col-md-4">
+					<div class="student-box">
+						<div class="student-title title-certified">
+							CERTIFIED STUDENT'S
+						</div>
+
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong> Subam Dey</p>
+								<p><strong class="me-1">Course:</strong>School Computer Course (Bengali Medium)</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong>Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>School Computer Course (Bengali Medium)</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+						<div class="student-info">
+							<img src="./assets/student.jpg" class="student-img" />
+							<div class="student-details">
+								<p><strong class="me-1">Name:</strong>Shely Begum</p>
+								<p><strong class="me-1">Course:</strong>Advance Diploma In Information Technology</p>
+								<p><strong class="me-1">Centre:</strong>Techno Skill It Training</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Call Now Section -->
+	<section class="call-now text-white py-4">
+		<div class="container text-center">
+			<h5 class="mb-4 text-black fs-4">Call Now</h5>
+			<div class="row g-4 justify-content-center">
+				<div class="col-12 col-md-4 hover-effect">
+					<div class="p-3 bg-warning enquiry text-dark rounded shadow-sm pointer d-flex align-items-center justify-content-center">						
+						<h5 class="">Franchise Enquiry:
+						+91-9933977036</h3>
+					</div>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="p-3 bg-success helpline text-white rounded shadow-sm pointer d-flex align-items-center justify-content-center">
+						<i class="bi bi-headset me-2"></i> 
+						<h5>Helpline: +91-9933977036</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Affiliation Logo Section -->
+	<section class="carousel-sectionn">
+		<div class="carousel-containerr">
+			<div class="carousell container">
+				<!-- original -->
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+
+				<!-- duplicate -->
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+				<div class="item"><img src="./assets/logo.jpeg" /></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer text-white pt-5 pb-3">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Logo & Social -->
+				<div class="col-md-4 text-center mb-4 mb-md-0">
+					<img src="./assets/logo-transparent.png" alt="Logo" height="60" class="mb-3" />
+					<div class="d-flex justify-content-center gap-4">
+						<a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+						<a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+						<a href="#" class="text-white"><i class="bi bi-google"></i></a>
+						<a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+					</div>
+				</div>
+
+				<!-- Sitemap -->
+				<div class="col-md-4 mb-4 mb-md-0">
+					<!-- <h6>Sitemap</h6> -->
+					<ul class="d-flex flex-column list-unstyled gap-1">
+						<li><a href="" class="text-white">Home</a></li>
+						<li><a href="#" class="text-white">About Us</a></li>
+						<li><a href="#" class="text-white">Courses</a></li>
+						<li><a href="#" class="text-white">Gallery</a></li>
+						<li><a href="#" class="text-white">Support</a></li>
+						<li><a href="#" class="text-white">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact -->
+				<div class="col-md-4">
+					<h6>Contact Us</h6>
+					<p>
+						2 No. Parkstreet, Near Rathala Railgate,<br />
+						PO+PS: Ranaghat, Dist-Nadia, Pin-741201, West Bengal
+					</p>
+					<p>
+						<i class="bi bi-telephone-fill"></i> +91-9933977036
+					</p>
+					<p><i class="bi bi-envelope-fill"></i> helpdesk@aibce.org</p>
+				</div>
+			</div>
+			<hr class="border-light" />
+			<p class="text-center mb-0">
+				<span class="fs-4">&reg;</span>
+				<span class="fs-4">All India Board of Computer Education</span>
+			</p>
+		</div>
+
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

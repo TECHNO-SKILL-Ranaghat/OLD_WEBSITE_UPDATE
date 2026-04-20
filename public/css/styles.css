@@ -1,0 +1,676 @@
+/* =========================================
+   0. IMPORTS & FONTS
+   ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Montserrat:ital,wght@0,500;1,500&family=Patua+One&family=Shippori+Mincho&family=Sora:wght@300&display=swap');
+
+@font-face {
+    font-family: 'GARA';
+    src: url('../font/2/GARA.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.sora {
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.jura {
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.shippori {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.patua-one {
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================================
+   1. BASE & GENERAL TAGS
+   ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* width of scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    /* 👈 change this */
+}
+
+/* handle (scroll thumb) */
+::-webkit-scrollbar-thumb {
+    background: #555;
+    /* border-radius: 10px; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   2. TOP BAR (Buttons & Login)
+   ========================================= */
+.custom-button {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: black;
+    background: #FFC700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .custom-button {
+        flex: 1 1 45%;
+        font-size: 13px;
+    }
+}
+
+.custom-button:hover {
+    background: #f2b515;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(165, 149, 78, 2);
+}
+
+.textDecoration {
+    text-decoration: none;
+}
+
+/* =========================================
+   3. NAVBAR
+   ========================================= */
+.navbar .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #0d6efd;
+}
+
+.nav-item {
+    color: #696c6e;
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+    box-shadow: transparent;
+}
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-item.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none !important;
+}
+
+.navbar .dropdown-menu {
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+/* Duplicate block from original CSS */
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 140%;
+    margin-top: 0;
+    left: 0;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+}
+
+.navbar .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar-nav .nav-item ul {
+    background-color: #fff;
+    color: black;
+    font-weight: lighter !important;
+}
+
+.custom-dropdown {
+    display: block;
+}
+
+.custom-dropdown .dropdown-item {
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: #696c6e;
+    font-weight: 300;
+    text-align: left;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #3f4142;
+}
+
+.navbar-nav .nav-item .sub-menu a:hover {
+    color: #fd0404;
+}
+
+/* Navbar Media Queries */
+@media (min-width: 992px) {
+    .navbar .dropdown-menu {
+        display: none;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.25s ease;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 0;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #f8f9fa;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        color: #333 !important;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown-item {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #f8f9fa;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .dropdown-item {
+        padding: 10px;
+    }
+}
+
+/* =========================================
+   4. CAROUSEL (Top Slider)
+   ========================================= */
+#carouselExample .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+}
+
+/* Duplicate block from original CSS */
+#carouselExample .carousel-item img {
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #carouselExample .carousel-item img {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #carouselExample .carousel-item img {
+        height: 30vh;
+    }
+}
+
+/* =========================================
+   5. WELCOME SECTION
+   ========================================= */
+.welcome-heading,
+.welcome-subheading {
+    font-family: 'GARA', monospace;
+    font-weight: bold;
+}
+
+.welcome-description {
+    font-family: 'GARA', monospace;
+}
+
+/* =========================================
+   6. CARDS & NEWS SECTION
+   ========================================= */
+.card-details {
+    width: 90%;
+    height: 150px !important;
+}
+
+.test {
+    height: 180px;
+    font-size: 18px;
+}
+
+/* Duplicate block from original CSS */
+.test {
+    border: none;
+    outline: none;
+    background-image: url('./assets/abc (3).jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+    color: navajowhite;
+}
+
+@media (max-width: 576px) {
+    .test {
+        height: 150px;
+        font-size: 12px;
+    }
+}
+
+.news {
+    width: 300px !important;
+}
+
+.news .news-heading {
+    height: 40px !important;
+    background: #45d3c5;
+    color: #fff;
+}
+
+.news-content {
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-scroll {
+    position: absolute;
+    width: 100%;
+    animation: scrollUp 20s linear infinite;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.news-content:hover .news-scroll {
+    animation-play-state: paused;
+}
+
+/* =========================================
+   7. REGISTRATION & FRANCHISE APPLY CARDS
+   ========================================= */
+.student-reg {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    background: rgb(46, 46, 46);
+    border-radius: 16px;
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+    color: #fff;
+    border: none;
+    color: whitesmoke;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.franc-appli {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    background: rgb(46, 46, 46);
+    border-radius: 16px;
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+    color: #fff;
+    border: none;
+    color: whitesmoke;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #5C636A;
+}
+
+/* =========================================
+   8. STUDENT SECTION
+   ========================================= */
+.student-section {
+    background: #F8E0E7;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 30px;
+}
+
+.student-section .student-box {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 18px;
+}
+
+.student-box {
+    background: #d8f0df;
+    border: transparent;
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .student-box {
+        height: 300px;
+    }
+}
+
+.student-title {
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+    font-weight: 500;
+    border-top-right-radius: 50px;
+    color: #3b3636;
+    text-transform: uppercase;
+}
+
+.title-applied {
+    background: rgb(236, 241, 162);
+}
+
+.title-registered {
+    background: rgb(236, 241, 162);
+    color: #0033cc;
+}
+
+.title-certified {
+    background: rgb(236, 241, 162);
+}
+
+.student-info {
+    left: 12px;
+    right: 12px;
+    background: #f3f3e9;
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: none;
+}
+
+.student-details p {
+    margin: 2px 0;
+    font-size: 11px;
+    color: #555;
+}
+
+/* =========================================
+   9. CALL NOW SECTION
+   ========================================= */
+.call-now {
+    background-color: #EBF8FF;
+}
+
+.call-now .row {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.call-now .enquiry {
+    background-color: #DFF1F2;
+    height: 75px !important;
+}
+
+.call-now .helpline {
+    background-color: #F2E9F9;
+    height: 75px !important;
+}
+
+@media (max-width: 768px) {
+    .call-now h5 {
+        font-size: 18px;
+    }
+
+    .call-now .p-3 {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   10. AFFILIATION LOGO SECTION
+   ========================================= */
+.carousel-sectionn {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(46, 46, 46);
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+    transition: background 0.6s ease;
+    overflow: hidden;
+}
+
+.carousel-containerr {
+    perspective: 1000px;
+}
+
+.carousell {
+    width: 75%;
+    display: flex;
+    gap: 200px;
+    width: max-content;
+    animation: slideLeft 40s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .carousell {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousell {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.carousel-sectionn:hover .carousell {
+    animation-play-state: paused;
+}
+
+.carousell:hover {
+    animation-play-state: paused;
+}
+
+.carousell .item:hover img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carousell .item:hover {
+    opacity: 1;
+    transform: scale(1.10);
+    z-index: 10;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 140px;
+}
+
+.item img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+    background-color: #0f1013;
+}
+
+.footer h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer .row>div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

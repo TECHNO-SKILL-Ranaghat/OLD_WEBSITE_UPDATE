@@ -1,0 +1,128 @@
+body {
+    background: #f5f7fb;
+    font-family: 'Segoe UI', sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECTION */
+.contact-section {
+    background: #f5f7fb;
+}
+
+/* BOXES */
+.contact-box,
+.contact-info {
+    /* background: #a89090; */
+    background: #b8a6a6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* TAG */
+.contact-tag {
+    /* font-size: larger; */
+    font-weight: 600;
+    color: #070707;
+    position: relative;
+}
+
+.contact-tag::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background: #646463;
+    display: block;
+    margin-top: 5px;
+}
+
+/* TITLE */
+.contact-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* INPUT */
+.custom-input {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.custom-input:focus {
+    /* border-color: #0d6efd; */
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.1);
+}
+
+.bi {
+    /* font-size: larger !important; */
+    color: rgb(31, 33, 34);
+}
+
+/* BUTTON */
+.btn-send {
+    background: rgb(224, 222, 222);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: rgb(199, 195, 195);
+    transform: translateY(-2px);
+}
+
+/* INFO */
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.info-item p {
+    font-size: larger !important;
+    color: #070707 !important;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgb(31, 33, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 18px;
+}
+
+/* TEXT */
+.contact-info p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* HOVER EFFECT */
+.contact-box:hover,
+.contact-info:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .contact-title {
+        font-size: 26px;
+    }
+}
