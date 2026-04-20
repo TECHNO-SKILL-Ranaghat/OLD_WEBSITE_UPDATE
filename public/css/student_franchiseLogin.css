@@ -38,8 +38,8 @@ body {
     justify-content: center;
     text-align: center;
     vertical-align: middle;
-    width: 90%;
-    max-width: 1000px;
+    width: 50%;
+    max-width: 800px;
     background-color: #ceb4b4;
     /* backdrop-filter: blur(18px); */
     /* -webkit-backdrop-filter: blur(18px); */
@@ -77,16 +77,6 @@ body {
     color: rgb(5, 5, 5);
     letter-spacing: 0.5px;
 }
-
-.form-control,
-.form-select {
-    border-radius: 3px;
-    border: 1px solid #dbe3ec;
-    padding: 10px 10px 10px 16px;
-}
-
-
-
 
 .btn-submit {
     /* background: linear-gradient(135deg, #0d6efd, #4dabf7); */
@@ -130,8 +120,11 @@ label {
     transition: 0.3s;
 }
 
-
-
+/* ===== Input Hover Effect ===== */
+.form-control:hover,
+.form-select:hover {
+    border-color: #0d6efd;
+}
 
 /* ===== Glass Effect Upgrade ===== */
 
@@ -188,7 +181,7 @@ label {
     transition: 0.3s ease;
 }
 
-/* ===== Input Effect ===== */
+
 
 /* FLOAT EFFECT */
 .input-box input:focus+label,
@@ -204,36 +197,22 @@ label {
     color: #fd0d0d;
 }
 
-
-.input-box input:focus,
+/* BORDER ACTIVE */
+/* .input-box input:focus,
 .input-box select:focus {
-    /* border-color: #0d6efd; */
+    border-color: #0d6efd;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.1);
+} */
+.input-box input:focus {
     border-color: transparent;
     box-shadow: 0 6px 18px rgba(13, 110, 253, 0.15);
     background: #fff;
 }
 
 /* Hover */
-.input-box input:hover,
-.input-box select:hover {
-    /* border-color: #0d6efd; */
+.input-box input:hover{
     border-color: transparent;
 }
-
-
-.form-control:hover,
-.form-select:hover {
-    /* border-color: #0d6efd; */
-    border-color: transparent;
-}
-
-.form-control:focus,
-.form-select:focus {
-    /* border-color: #0d6efd; */
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
-}
-
 
 /* ===== Section Title Animation ===== */
 .section-title {
@@ -310,7 +289,7 @@ label {
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
     .section-title {

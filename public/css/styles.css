@@ -1,6 +1,4 @@
-/* =========================================
-   0. IMPORTS & FONTS
-   ========================================= */
+/* 0. IMPORTS & FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Montserrat:ital,wght@0,500;1,500&family=Patua+One&family=Shippori+Mincho&family=Sora:wght@300&display=swap');
 
@@ -53,13 +51,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* width of scrollbar */
+
 ::-webkit-scrollbar {
     width: 6px;
-    /* 👈 change this */
 }
 
-/* handle (scroll thumb) */
+
 ::-webkit-scrollbar-thumb {
     background: #555;
     /* border-radius: 10px; */
@@ -346,7 +343,7 @@ html {
 .test {
     border: none;
     outline: none;
-    background-image: url('./assets/abc (3).jpg');
+    background-image: url('./assets/abc(3).jpg');
     background-size: cover;
     background-position: center;
     height: 200px;
@@ -653,6 +650,68 @@ html {
    ========================================= */
 .footer {
     background-color: #0f1013;
+}
+
+.footer .footer-icons a .bi{
+    display: inline-block;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+.footer .footer-icons a .bi:hover{
+    transform: translateX(2px);
+}
+
+.footer .footer-icons a:nth-of-type(1):hover .bi {
+    /* color: rgb(112, 112, 196) !important; */
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer .footer-icons a:nth-of-type(2):hover .bi {
+    /* color: rgb(88, 189, 202) !important; */
+    background: linear-gradient(90deg, #1DA1F2 0%, #009FFC 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer .footer-icons a:nth-of-type(3):hover .bi{
+    background: linear-gradient(135deg, #4285F4 0%, #EA4335 25%, #FBBC05 50%, #34A853 75%, #4285F4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+}
+
+.footer .footer-icons a:nth-of-type(4):hover .bi {
+    /* color: red !important; */
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+}
+
+.footer .footer-icons a:nth-of-type(5):hover .bi {
+    /* color: rgb(151, 192, 151) !important; */
+    background: linear-gradient(45deg, #E5FFCC, #1EBEA5, #00E676, #D0E9EA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.footer ul li .text-effect {
+    display: inline-block;
+    transition: all 0.1s ease;
+}
+
+.footer ul li .text-effect:hover {
+    transform: translateX(5px);
+    color: #f5ce0a !important;
+    /* optional highlight */
 }
 
 .footer h6 {
