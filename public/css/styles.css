@@ -459,9 +459,9 @@ html {
 }
 
 .student-section .student-box {
-    border-top-right-radius: 50px;
+    border-top-right-radius: 30px;
     border-top-left-radius: 15px;
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 30px;
     border-bottom-right-radius: 18px;
 }
 
